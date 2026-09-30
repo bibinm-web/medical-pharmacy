@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Shopping Cart — VitaCure Care Pharmacy</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="topbar">
+  <div class="container wrap">
+    <div class="tb-items"><span><i class="fa-solid fa-truck-fast"></i> Free delivery on orders over $49</span><span><i class="fa-solid fa-shield-heart"></i> Licensed pharmacists on staff</span></div>
+    <div class="tb-items"><span><i class="fa-solid fa-phone"></i> +1 (415) 555-0142</span><span><i class="fa-solid fa-location-dot"></i> 240 Bay Street, San Francisco</span></div>
+  </div>
+</div>
+
+<header class="site-header">
+  <div class="container header-main">
+    <a href="index.html" class="logo"><span class="mark"><i class="fa-solid fa-prescription-bottle-medical"></i></span><span>VitaCure<small>Care Pharmacy</small></span></a>
+    <form class="searchbar">
+      <select aria-label="Category"><option>All Categories</option><option>Prescription</option><option>Vitamins</option><option>Personal Care</option><option>Medical Devices</option></select>
+      <input type="text" placeholder="Search for medicines, vitamins or health products…">
+      <button type="submit" aria-label="Search"><i class="fa-solid fa-magnifying-glass"></i></button>
+    </form>
+    <div class="header-support"><i class="fa-solid fa-headset" style="font-size:24px;color:#0f6f8f"></i><span>Pharmacist support<strong>Open 24 / 7</strong></span></div>
+    <div class="header-actions">
+      <a href="#" class="icon-btn" title="My account"><i class="fa-regular fa-user"></i></a>
+      <a href="#" class="icon-btn" title="Wishlist"><i class="fa-regular fa-heart"></i><span class="count">3</span></a>
+      <a href="cart.html" class="icon-btn" title="Cart"><i class="fa-solid fa-bag-shopping"></i><span class="count js-cart-count">0</span></a>
+    </div>
+  </div>
+  <nav class="main-nav">
+    <div class="container">
+      <button class="nav-toggle"><i class="fa-solid fa-bars"></i> Browse All Categories</button>
+      <ul>
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li class="has-drop"><a href="shop.html" class="nav-link">Shop <i class="fa-solid fa-chevron-down" style="font-size:9px"></i></a>
+          <div class="mega">
+            <div><h5>Pharmacy</h5><a href="shop.html">Prescription Refills</a><a href="shop.html">Pain &amp; Fever</a><a href="shop.html">Cold &amp; Flu</a><a href="shop.html">Digestive Health</a></div>
+            <div><h5>Wellness</h5><a href="shop.html">Vitamins &amp; Minerals</a><a href="shop.html">Sports Nutrition</a><a href="shop.html">Immunity Support</a><a href="shop.html">Sleep &amp; Stress</a></div>
+            <div><h5>Family Care</h5><a href="shop.html">Baby &amp; Mother</a><a href="shop.html">Skin &amp; Personal Care</a><a href="shop.html">First Aid</a><a href="shop.html">Medical Devices</a></div>
+          </div>
+        </li>
+        <li><a href="product.html" class="nav-link">Product</a></li>
+        <li><a href="about.html" class="nav-link">About Us</a></li>
+        <li><a href="blog.html" class="nav-link">Health Blog</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+</header>
+
+<section class="page-hero">
+  <div class="container">
+    <h1>Shopping Cart</h1>
+    <div class="crumbs"><a href="index.html">Home</a> / <span>Cart</span></div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+
+    <div id="cart-layout" class="cart-layout">
+      <div>
+        <table class="cart-table">
+          <thead>
+            <tr><th>Product</th><th>Price</th><th>Quantity</th><th>Subtotal</th><th></th></tr>
+          </thead>
+          <tbody id="cart-body"></tbody>
+        </table>
+
+        <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:24px">
+          <a href="shop.html" class="btn btn-outline"><i class="fa-solid fa-arrow-left-long"></i> Continue shopping</a>
+          <button class="btn btn-outline" onclick="window.vcToast('Cart totals refreshed.','fa-rotate')"><i class="fa-solid fa-rotate"></i> Update cart</button>
+        </div>
+      </div>
+
+      <aside>
+        <div class="cart-totals">
+          <h4>Cart Totals</h4>
+          <div class="row"><span>Subtotal</span><strong id="sum-sub">$0.00</strong></div>
+          <div class="row"><span>Delivery</span><strong id="sum-ship">$0.00</strong></div>
+          <div class="row"><span>Estimated tax (5%)</span><strong id="sum-tax">$0.00</strong></div>
+          <div class="row total"><span>Total</span><span id="sum-total">$0.00</span></div>
+
+          <div class="coupon" style="margin-top:20px">
+            <input type="text" placeholder="Coupon code">
+            <button class="btn btn-outline" onclick="window.vcToast('Coupon code applied.','fa-ticket')">Apply</button>
+          </div>
+
+          <button class="btn btn-green btn-block" id="checkout-btn"><i class="fa-solid fa-lock"></i> Proceed to checkout</button>
+
+          <p style="font-size:13px;color:#7b8794;margin-top:14px;text-align:center">A licensed pharmacist reviews every order before dispatch. Free delivery over $49.</p>
+
+          <div class="pay" style="justify-content:center;margin-top:14px;font-size:26px;color:#9fb0bf">
+            <i class="fa-brands fa-cc-visa"></i><i class="fa-brands fa-cc-mastercard"></i><i class="fa-brands fa-cc-amex"></i><i class="fa-brands fa-cc-paypal"></i>
+          </div>
+        </div>
+      </aside>
+    </div>
+
+    <div class="empty-cart" id="empty-cart" style="display:none">
+      <i class="fa-solid fa-bag-shopping"></i>
+      <h3 style="margin-bottom:8px">Your cart is empty</h3>
+      <p style="color:#7b8794;margin-bottom:20px">Add a few health essentials and they will appear here.</p>
+      <a href="shop.html" class="btn btn-primary"><i class="fa-solid fa-capsules"></i> Start shopping</a>
+    </div>
+
+  </div>
+</section>
+
+<section class="newsletter">
+  <div class="container wrap">
+    <div><h3>Health tips from our pharmacists</h3><p>One short email a month. Medicine reminders, seasonal advice, no spam.</p></div>
+    <form class="news-form"><input type="email" placeholder="Your email address" required><button type="submit">Subscribe</button></form>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="f-grid">
+      <div>
+        <a href="index.html" class="logo"><span class="mark"><i class="fa-solid fa-prescription-bottle-medical"></i></span><span>VitaCure<small>Care Pharmacy</small></span></a>
+        <p>A licensed community pharmacy dispensing prescriptions, running health screenings and delivering everyday wellness essentials since 1998.</p>
+        <div class="f-soc"><a href="#"><i class="fa-brands fa-facebook-f"></i></a><a href="#"><i class="fa-brands fa-x-twitter"></i></a><a href="#"><i class="fa-brands fa-instagram"></i></a><a href="#"><i class="fa-brands fa-youtube"></i></a></div>
+      </div>
+      <div><h4>Shop</h4><ul><li><a href="shop.html">Prescription Refills</a></li><li><a href="shop.html">Vitamins &amp; Minerals</a></li><li><a href="shop.html">Pain Relief</a></li><li><a href="shop.html">Personal Care</a></li><li><a href="shop.html">Medical Devices</a></li></ul></div>
+      <div><h4>Services</h4><ul><li><a href="contact.html">Medication Review</a></li><li><a href="contact.html">Health Screening</a></li><li><a href="contact.html">Auto-Refill Programme</a></li><li><a href="contact.html">Vaccinations</a></li><li><a href="about.html">Our Pharmacists</a></li></ul></div>
+      <div><h4>Get in touch</h4>
+        <ul class="f-contact">
+          <li><i class="fa-solid fa-location-dot"></i><span>240 Bay Street, San Francisco, CA 94133</span></li>
+          <li><i class="fa-solid fa-phone"></i><span>+1 (415) 555-0142</span></li>
+          <li><i class="fa-regular fa-envelope"></i><span>care@vitacure-pharmacy.example</span></li>
+          <li><i class="fa-regular fa-clock"></i><span>Mon–Sat 08:00–21:00 · Sun 10:00–18:00</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="f-bottom">
+      <span>© 2026 VitaCure Care Pharmacy. All rights reserved. Demo website — not a real pharmacy.</span>
+      <div class="pay"><i class="fa-brands fa-cc-visa"></i><i class="fa-brands fa-cc-mastercard"></i><i class="fa-brands fa-cc-amex"></i><i class="fa-brands fa-cc-paypal"></i></div>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

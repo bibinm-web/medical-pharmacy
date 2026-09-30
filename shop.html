@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Shop — VitaCure Care Pharmacy</title>
+<meta name="description" content="Browse prescription medicines, vitamins, personal care and first aid essentials at VitaCure Care Pharmacy.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="topbar">
+  <div class="container wrap">
+    <div class="tb-items">
+      <span><i class="fa-solid fa-truck-fast"></i> Free delivery on orders over $49</span>
+      <span><i class="fa-solid fa-shield-heart"></i> Licensed pharmacists on staff</span>
+    </div>
+    <div class="tb-items">
+      <span><i class="fa-solid fa-phone"></i> +1 (415) 555-0142</span>
+      <span><i class="fa-solid fa-location-dot"></i> 240 Bay Street, San Francisco</span>
+    </div>
+  </div>
+</div>
+
+<header class="site-header">
+  <div class="container header-main">
+    <a href="index.html" class="logo"><span class="mark"><i class="fa-solid fa-prescription-bottle-medical"></i></span><span>VitaCure<small>Care Pharmacy</small></span></a>
+    <form class="searchbar">
+      <select aria-label="Category"><option>All Categories</option><option>Prescription</option><option>Vitamins</option><option>Personal Care</option><option>Medical Devices</option></select>
+      <input type="text" placeholder="Search for medicines, vitamins or health products…">
+      <button type="submit" aria-label="Search"><i class="fa-solid fa-magnifying-glass"></i></button>
+    </form>
+    <div class="header-support"><i class="fa-solid fa-headset" style="font-size:24px;color:#0f6f8f"></i><span>Pharmacist support<strong>Open 24 / 7</strong></span></div>
+    <div class="header-actions">
+      <a href="#" class="icon-btn" title="My account"><i class="fa-regular fa-user"></i></a>
+      <a href="#" class="icon-btn" title="Wishlist"><i class="fa-regular fa-heart"></i><span class="count">3</span></a>
+      <a href="cart.html" class="icon-btn" title="Cart"><i class="fa-solid fa-bag-shopping"></i><span class="count js-cart-count">0</span></a>
+    </div>
+  </div>
+  <nav class="main-nav">
+    <div class="container">
+      <button class="nav-toggle"><i class="fa-solid fa-bars"></i> Browse All Categories</button>
+      <ul>
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li class="has-drop active">
+          <a href="shop.html" class="nav-link">Shop <i class="fa-solid fa-chevron-down" style="font-size:9px"></i></a>
+          <div class="mega">
+            <div><h5>Pharmacy</h5><a href="shop.html">Prescription Refills</a><a href="shop.html">Pain &amp; Fever</a><a href="shop.html">Cold &amp; Flu</a><a href="shop.html">Digestive Health</a></div>
+            <div><h5>Wellness</h5><a href="shop.html">Vitamins &amp; Minerals</a><a href="shop.html">Sports Nutrition</a><a href="shop.html">Immunity Support</a><a href="shop.html">Sleep &amp; Stress</a></div>
+            <div><h5>Family Care</h5><a href="shop.html">Baby &amp; Mother</a><a href="shop.html">Skin &amp; Personal Care</a><a href="shop.html">First Aid</a><a href="shop.html">Medical Devices</a></div>
+          </div>
+        </li>
+        <li><a href="product.html" class="nav-link">Product</a></li>
+        <li><a href="about.html" class="nav-link">About Us</a></li>
+        <li><a href="blog.html" class="nav-link">Health Blog</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+</header>
+
+<section class="page-hero">
+  <div class="container">
+    <h1>Shop Pharmacy &amp; Wellness</h1>
+    <div class="crumbs"><a href="index.html">Home</a> / <a href="shop.html">Shop</a> / <span>All Products</span></div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container shop-wrap">
+
+    <aside>
+      <div class="widget">
+        <h4>Product Categories</h4>
+        <ul class="filter-list">
+          <li><a href="#">Pain &amp; Fever <span>(42)</span></a></li>
+          <li><a href="#">Cold &amp; Flu <span>(28)</span></a></li>
+          <li><a href="#">Vitamins &amp; Minerals <span>(64)</span></a></li>
+          <li><a href="#">Skin &amp; Personal Care <span>(37)</span></a></li>
+          <li><a href="#">First Aid <span>(19)</span></a></li>
+          <li><a href="#">Baby &amp; Mother <span>(24)</span></a></li>
+          <li><a href="#">Medical Devices <span>(31)</span></a></li>
+        </ul>
+      </div>
+
+      <div class="widget price-range">
+        <h4>Filter by Price</h4>
+        <input type="range" id="price-range" min="0" max="200" value="120">
+        <p style="font-size:13.5px;color:#7b8794;margin-top:10px">Price: <strong id="price-out" style="color:#10263a">$0 — $120</strong></p>
+      </div>
+
+      <div class="widget">
+        <h4>Availability</h4>
+        <ul class="filter-list">
+          <li><a href="#">In stock <span>(186)</span></a></li>
+          <li><a href="#">Prescription only <span>(54)</span></a></li>
+          <li><a href="#">On sale <span>(23)</span></a></li>
+        </ul>
+      </div>
+
+      <div class="widget" style="background:linear-gradient(160deg,#136f90,#0d5470);border:0;color:#fff">
+        <h4 style="color:#fff;border-bottom-color:rgba(255,255,255,.2)">Need advice?</h4>
+        <p style="font-size:14px;color:rgba(255,255,255,.85)">Our pharmacists review every order and are happy to talk through your options.</p>
+        <a href="contact.html" class="btn btn-white btn-block" style="margin-top:12px">Ask a Pharmacist</a>
+      </div>
+    </aside>
+
+    <div>
+      <div class="shop-top">
+        <p>Showing <strong>1–12</strong> of <strong>186</strong> products</p>
+        <div style="display:flex;align-items:center;gap:10px">
+          <label for="sort" style="font-size:14px;color:#7b8794">Sort by</label>
+          <select id="sort">
+            <option>Popularity</option><option>Price: low to high</option><option>Price: high to low</option><option>Newest</option><option>Rating</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="product-grid" style="grid-template-columns:repeat(3,1fr)">
+        <article class="product-card">
+          <div class="p-thumb"><span class="p-badge">Sale</span><img src="https://sspark.genspark.ai/i/XtvZzhNY3rEbuWYw?width=2560" alt="Ibuprofen tablets">
+            <div class="p-tools"><button data-wish><i class="fa-regular fa-heart"></i></button><button data-compare><i class="fa-solid fa-code-compare"></i></button><button><i class="fa-regular fa-eye"></i></button></div></div>
+          <div class="p-body"><div class="p-cat">Pain Relief</div><h3><a href="product.html">Ibuprofen Tablets 200mg — 48 Pack</a></h3>
+            <div class="stars">★★★★★ <span>(124)</span></div><div class="p-price">$12.40 <del>$16.00</del></div>
+            <button class="btn btn-primary" data-add="p1" data-name="Ibuprofen Tablets 200mg" data-price="12.40" data-img="https://sspark.genspark.ai/i/XtvZzhNY3rEbuWYw?width=2560"><i class="fa-solid fa-cart-plus"></i> Add to cart</button></div>
+        </article>
+
+        <article class="product-card">
+          <div class="p-thumb"><span class="p-badge new">New</span><img src="https://sspark.genspark.ai/i/G65Twu1KxYU3BAUC?width=2560" alt="Paracetamol capsules">
+            <div class="p-tools"><button data-wish><i class="fa-regular fa-heart"></i></button><button data-compare><i class="fa-solid fa-code-compare"></i></button><button><i class="fa-regular fa-eye"></i></button></div></div>
+          <div class="p-body"><div class="p-cat">Pain Relief</div><h3><a href="product.html">Paracetamol 500mg Capsules — 32 Pack</a></h3>
+            <div class="stars">★★★★☆ <span>(88)</span></div><div class="p-price">$8.90</div>
+            <button class="btn btn-primary" data-add="p2" data-name="Paracetamol 500mg Capsules" data-price="8.90" data-img="https://sspark.genspark.ai/i/G65Twu1KxYU3BAUC?width=2560"><i class="fa-solid fa-cart-plus"></i> Add to cart</button></div>
+        </article>
+
+        <article class="product-card">
+          <div class="p-thumb"><img src="https://sspark.genspark.ai/i/uYEemytRMk7UFLTs?width=2560" alt="Vitamin D3 softgels">
+            <div class="p-tools"><button data-wish><i class="fa-regular fa-heart"></i></button><button data-compare><i class="fa-solid fa-code-compare"></i></button><button><i class="fa-regular fa-eye"></i></button></div></div>
+          <div class="p-body"><div class="p-cat">Vitamins</div><h3><a href="product.html">Vitamin D3 1000 IU Softgels — 90 Pack</a></h3>
+            <div class="stars">★★★★★ <span>(203)</span></div><div class="p-price">$17.50</div>
+            <button class="btn btn-primary" data-add="p5" data-name="Vitamin D3 1000 IU Softgels" data-price="17.50" data-img="https://sspark.genspark.ai/i/uYEemytRMk7UFLTs?width=2560"><i class="fa-solid fa-cart-plus"></i> Add to cart</button></div>
+        </article>
+
+        <article class="product-card">
+          <div class="p-thumb"><img src="https://sspark.genspark.ai/i/zcz3OYlipwqC4oSE?width=2560" alt="Vitamin C effervescent">
+            <div class="p-tools"><button data-wish><i class="fa-regular fa-heart"></i></button><button data-compare><i class="fa-solid fa-code-compare"></i></button><button><i class="fa-regular fa-eye"></i></button></div></div>
+          <div class="p-body"><div class="p-cat">Vitamins</div><h3><a href="product.html">Vitamin C 1000mg Effervescent — 20 Tabs</a></h3>
+            <div class="stars">★★★★☆ <span>(77)</span></div><div class="p-price">$11.30</div>
+            <button class="btn btn-primary" data-add="p6" data-name="Vitamin C 1000mg Effervescent" data-price="11.30" data-img="https://sspark.genspark.ai/i/zcz3OYlipwqC4oSE?width=2560"><i class="fa-solid fa-cart-plus"></i> Add to cart</button></div>
+        </article>
+
+        <article class="product-card">
+          <div class="p-thumb"><img src="https://sspark.genspark.ai/i/5qmBLULyidf9oVb8?width=2560" alt="Repair cream">
+            <div class="p-tools"><button data-wish><i class="fa-regular fa-heart"></i></button><button data-compare><i class="fa-solid fa-code-compare"></i></button><button><i class="fa-regular fa-eye"></i></button></div></div>
+          <div class="p-body"><div class="p-cat">Personal Care</div><h3><a href="product.html">Dermatological Repair Cream 100ml</a></h3>
+            <div class="stars">★★★★★ <span>(152)</span></div><div class="p-price">$19.90</div>
+            <button class="btn btn-primary" data-add="p9" data-name="Dermatological Repair Cream" data-price="19.90" data-img="https://sspark.genspark.ai/i/5qmBLULyidf9oVb8?width=2560"><i class="fa-solid fa-cart-plus"></i> Add to cart</button></div>
+        </article>
+
+        <article class="product-card">
+          <div class="p-thumb"><span class="p-badge">Sale</span><img src="https://sspark.genspark.ai/i/HeHpEgrg6qMQL7og?width=2560" alt="Supplement organiser">
+            <div class="p-tools"><button data-wish><i class="fa-regular fa-heart"></i></button><button data-compare><i class="fa-solid fa-code-compare"></i></button><button><i class="fa-regular fa-eye"></i></button></div></div>
+          <div class="p-body"><div class="p-cat">Vitamins</div><h3><a href="product.html">Omega-3 Fish Oil 1000mg — 120 Caps</a></h3>
+            <div class="stars">★★★★☆ <span>(64)</span></div><div class="p-price">$24.80 <del>$29.50</del></div>
+            <button class="btn btn-primary" data-add="p8" data-name="Omega-3 Fish Oil 1000mg" data-price="24.80" data-img="https://sspark.genspark.ai/i/HeHpEgrg6qMQL7og?width=2560"><i class="fa-solid fa-cart-plus"></i> Add to cart</button></div>
+        </article>
+
+        <article class="product-card">
+          <div class="p-thumb"><img src="https://sspark.genspark.ai/i/21YGItEOC6j1HNxB?width=2560" alt="First aid kit">
+            <div class="p-tools"><button data-wish><i class="fa-regular fa-heart"></i></button><button data-compare><i class="fa-solid fa-code-compare"></i></button><button><i class="fa-regular fa-eye"></i></button></div></div>
+          <div class="p-body"><div class="p-cat">First Aid</div><h3><a href="product.html">Family First Aid Assortment Kit</a></h3>
+            <div class="stars">★★★★★ <span>(131)</span></div><div class="p-price">$29.50</div>
+            <button class="btn btn-primary" data-add="p13" data-name="Family First Aid Assortment Kit" data-price="29.50" data-img="https://sspark.genspark.ai/i/21YGItEOC6j1HNxB?width=2560"><i class="fa-solid fa-cart-plus"></i> Add to cart</button></div>
+        </article>
+
+        <article class="product-card">
+          <div class="p-thumb"><img src="https://sspark.genspark.ai/i/fTHfivNhg9fQCMI4?width=2560" alt="Anti-inflammatory tablets">
+            <div class="p-tools"><button data-wish><i class="fa-regular fa-heart"></i></button><button data-compare><i class="fa-solid fa-code-compare"></i></button><button><i class="fa-regular fa-eye"></i></button></div></div>
+          <div class="p-body"><div class="p-cat">Pain Relief</div><h3><a href="product.html">Anti-Inflammatory Tablets — 30 Pack</a></h3>
+            <div class="stars">★★★★★ <span>(56)</span></div><div class="p-price">$14.20</div>
+            <button class="btn btn-primary" data-add="p3" data-name="Anti-Inflammatory Tablets" data-price="14.20" data-img="https://sspark.genspark.ai/i/fTHfivNhg9fQCMI4?width=2560"><i class="fa-solid fa-cart-plus"></i> Add to cart</button></div>
+        </article>
+
+        <article class="product-card">
+          <div class="p-thumb"><span class="p-badge new">New</span><img src="https://sspark.genspark.ai/i/swbrlxWTImkiCp6n?width=2560" alt="Antiseptic tablets">
+            <div class="p-tools"><button data-wish><i class="fa-regular fa-heart"></i></button><button data-compare><i class="fa-solid fa-code-compare"></i></button><button><i class="fa-regular fa-eye"></i></button></div></div>
+          <div class="p-body"><div class="p-cat">First Aid</div><h3><a href="product.html">Antiseptic Wound Care Tablets — 24 Pack</a></h3>
+            <div class="stars">★★★★★ <span>(29)</span></div><div class="p-price">$10.10</div>
+            <button class="btn btn-primary" data-add="p15" data-name="Antiseptic Wound Care Tablets" data-price="10.10" data-img="https://sspark.genspark.ai/i/swbrlxWTImkiCp6n?width=2560"><i class="fa-solid fa-cart-plus"></i> Add to cart</button></div>
+        </article>
+      </div>
+
+      <div class="pagination">
+        <a href="#" class="active">1</a><a href="#">2</a><a href="#">3</a><a href="#"><i class="fa-solid fa-angle-right"></i></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="newsletter">
+  <div class="container wrap">
+    <div><h3>Health tips from our pharmacists</h3><p>One short email a month. Medicine reminders, seasonal advice, no spam.</p></div>
+    <form class="news-form"><input type="email" placeholder="Your email address" required><button type="submit">Subscribe</button></form>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="f-grid">
+      <div>
+        <a href="index.html" class="logo"><span class="mark"><i class="fa-solid fa-prescription-bottle-medical"></i></span><span>VitaCure<small>Care Pharmacy</small></span></a>
+        <p>A licensed community pharmacy dispensing prescriptions, running health screenings and delivering everyday wellness essentials since 1998.</p>
+        <div class="f-soc"><a href="#"><i class="fa-brands fa-facebook-f"></i></a><a href="#"><i class="fa-brands fa-x-twitter"></i></a><a href="#"><i class="fa-brands fa-instagram"></i></a><a href="#"><i class="fa-brands fa-youtube"></i></a></div>
+      </div>
+      <div><h4>Shop</h4><ul><li><a href="shop.html">Prescription Refills</a></li><li><a href="shop.html">Vitamins &amp; Minerals</a></li><li><a href="shop.html">Pain Relief</a></li><li><a href="shop.html">Personal Care</a></li><li><a href="shop.html">Medical Devices</a></li></ul></div>
+      <div><h4>Services</h4><ul><li><a href="contact.html">Medication Review</a></li><li><a href="contact.html">Health Screening</a></li><li><a href="contact.html">Auto-Refill Programme</a></li><li><a href="contact.html">Vaccinations</a></li><li><a href="about.html">Our Pharmacists</a></li></ul></div>
+      <div><h4>Get in touch</h4>
+        <ul class="f-contact">
+          <li><i class="fa-solid fa-location-dot"></i><span>240 Bay Street, San Francisco, CA 94133</span></li>
+          <li><i class="fa-solid fa-phone"></i><span>+1 (415) 555-0142</span></li>
+          <li><i class="fa-regular fa-envelope"></i><span>care@vitacure-pharmacy.example</span></li>
+          <li><i class="fa-regular fa-clock"></i><span>Mon–Sat 08:00–21:00 · Sun 10:00–18:00</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="f-bottom">
+      <span>© 2026 VitaCure Care Pharmacy. All rights reserved. Demo website — not a real pharmacy.</span>
+      <div class="pay"><i class="fa-brands fa-cc-visa"></i><i class="fa-brands fa-cc-mastercard"></i><i class="fa-brands fa-cc-amex"></i><i class="fa-brands fa-cc-paypal"></i></div>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
